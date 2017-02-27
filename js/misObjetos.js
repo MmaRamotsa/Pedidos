@@ -1,35 +1,54 @@
-// Un pedido estará compuesto de:
+// ===================================================
+// Página creada por : Maria Antonia Martínez García
+// Fecha: 27/02/2017
+// getsión : v1.0
+// ===================================================
+// Descripción: Un pedido está compuesto de los siguientes datos:
 // - Una fecha de pedido
 // - Un número total de artículos
 // - Un total de pedido
 // - Una dirección de entrega
 // - Una dirección de facturación
-function Pedido(fecha, num, total, entrega, facturacion){
+// ===================================================
+function Pedido(fechaPedido,
+								numArticulos,
+								totalPedido,
+								dirEntrega,
+								dirFacturacion){
 	//Estado
-	this.fecha = fecha;
-	this.numArticulos = num;
-	this.total = total;
-	this.dirEntrega = entrega;
-	this.dirFacturacion = facturacion;
+	this.fechaPedido = fechaPedido;
+	this.numArticulos = numArticulos;
+	this.totalPedido = totalPedido;
+	this.dirEntrega = dirEntrega;
+	this.dirFacturacion = dirFacturacion;
 	//Comportamiento
-	//Función que permita conocer por la Consola de Google Chrome, 
-	// cada uno de los datos del pedido. 
-	// Hacer una función diferente por cada dato. 
-	this.verFecha = function (){
-		console.log("La fecha del pedido es: " + this.fecha );
+	// Método para conocer la fecha del pedido.
+	this.getFecha = function (){
+		return this.fechaPedido;
 	}
-	this.verNumArticulos = function (){
-		console.log("El número de artículos del pedido es: " + this.numArticulos );
+	// Método para conocer el número de artículos del pedido.
+	this.getNumArticulos = function (){
+		return this.numArticulos;
 	}
-	this.verTotal = function (){
-		console.log("El total del pedido es: " + this.total );
+	// Método para conocer el total del pedido.
+	this.getTotal = function (){
+		return this.totalPedido;
 	}
-	this.verDirEntrega = function (){
-		console.log("La dirección de entrega del pedido es: " + this.dirEntrega );
+	// Método para conocer la dirección de entrega del pedido.
+	this.getDirEntrega = function (){
+		return this.dirEntrega;
 	}
-	this.verDirFacturacion = function (){
-		console.log("La dirección de facturación del pedido es: " + this.dirFacturacion );
+	// Método para conocer la dirección de facturación del pedido.
+	this.getDirFacturacion = function (){
+		return this.dirFacturacion;
 	}
-	// Debe poderse crear varios pedidos con todos los datos de un pedido, 
-	// así como modificar las direcciones en cualquier momento.
+
+	//Método para modificar la dirección de entrega
+	this.setDirEntrega = function(nuevaDirEntrega){
+		this.dirEntrega = nuevaDirEntrega;
+	}
+	//Método para modificar la dirección de facturación
+	this.setDirFacturacion = function(nuevaDirFacturacion){
+		this.dirFacturacion = nuevaDirFacturacion;
+	}
 }
